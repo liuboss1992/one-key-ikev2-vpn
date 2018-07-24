@@ -30,7 +30,8 @@
 ==========
 1. 下载脚本:
     ```shell
-    wget --no-check-certificate https://raw.githubusercontent.com/quericy/one-key-ikev2-vpn/master/one-key-ikev2.sh
+    git clone https://github.com/liuboss1992/one-key-ikev2-vpn
+    cd one-key-ikev2-vpn
     ```
     * 注:如需使用其他分支的脚本,请将上述url中的master修改为分支名称,各分支区别详见本页的[分支说明](#分支说明)节点
 
