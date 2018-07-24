@@ -214,14 +214,15 @@ function pre_install(){
 function download_files(){
     strongswan_version='strongswan-5.5.1'
     strongswan_file="$strongswan_version.tar.gz"
-    if [ -f $strongswan_file ];then
-        echo -e "$strongswan_file [$(__green "found")]"
-    else
-        if ! wget --no-check-certificate https://download.strongswan.org/$strongswan_file;then
-            echo "Failed to download $strongswan_file"
-            exit 1
-        fi
-    fi
+# Failed to download strongswan-5.5.1.tar.gz So I download it manually, and update the git repository
+#    if [ -f $strongswan_file ];then
+#        echo -e "$strongswan_file [$(__green "found")]"
+#    else
+#        if ! wget --no-check-certificate https://download.strongswan.org/$strongswan_file;then
+#            echo "Failed to download $strongswan_file"
+#            exit 1
+#        fi
+#    fi
     tar xzf $strongswan_file
     if [ $? -eq 0 ];then
         cd $cur_dir/$strongswan_version/
